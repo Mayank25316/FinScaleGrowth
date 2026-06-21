@@ -1,0 +1,513 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   GLOBAL DESIGN TOKENS — ULTRA-PREMIUM DARK
+   ───────────────────────────────────────────── */
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-bg:        #0A0F1D;
+  --color-surface:   #111827;
+  --color-surface2:  #1a2235;
+  --color-border:    rgba(255,255,255,0.06);
+  --color-navy:      #0A1F44;
+  --color-royal:     #2563EB;
+  --color-blue:      #3B82F6;
+  --color-emerald:   #0B6B4B;
+  --color-green:     #10B981;
+  --color-gold:      #C89B3C;
+  --color-white:     #FFFFFF;
+  --color-muted:     #9CA3AF;
+  --color-subtle:    #D1D5DB;
+}
+
+/* ─────────────────────────────────────────────
+   RESET
+   ───────────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0A0F1D;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────
+   GRID BACKGROUNDS
+   ───────────────────────────────────────────── */
+.bg-grid-dark {
+  background-color: #0A0F1D;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.bg-grid-surface {
+  background-color: #111827;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ─────────────────────────────────────────────
+   CONTAINER UTILITY
+   ───────────────────────────────────────────── */
+.container-xl {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-xl { padding-left: 2rem; padding-right: 2rem; }
+}
+@media (min-width: 1024px) {
+  .container-xl { padding-left: 2.5rem; padding-right: 2.5rem; }
+}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY
+   ───────────────────────────────────────────── */
+.headline {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.headline-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.accent-blue  { color: #3B82F6; }
+.accent-gold  { color: #C89B3C; }
+.accent-green { color: #10B981; }
+
+.subtext {
+  font-family: "Inter", sans-serif;
+  color: #9CA3AF;
+  line-height: 1.75;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION LABEL / PILL
+   ───────────────────────────────────────────── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3B82F6;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.25);
+  padding: 5px 14px;
+  border-radius: 99px;
+}
+
+.pill-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #10B981;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.25);
+  padding: 5px 14px;
+  border-radius: 99px;
+}
+
+.pill-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #C89B3C;
+  background: rgba(200,155,60,0.1);
+  border: 1px solid rgba(200,155,60,0.3);
+  padding: 5px 14px;
+  border-radius: 99px;
+}
+
+/* ─────────────────────────────────────────────
+   BUTTONS
+   ───────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563EB;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 13px 26px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.18s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 0 28px rgba(37,99,235,0.4);
+  transform: translateY(-1px);
+}
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16,185,129,0.15);
+  color: #10B981;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 13px 26px;
+  border-radius: 8px;
+  border: 1px solid rgba(16,185,129,0.3);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.18s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.btn-green:hover {
+  background: rgba(16,185,129,0.25);
+  border-color: rgba(16,185,129,0.5);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.18s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────
+   NAVBAR
+   ───────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,15,29,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s ease;
+}
+
+/* ─────────────────────────────────────────────
+   CARDS
+   ───────────────────────────────────────────── */
+.card-dark {
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card-dark:hover {
+  border-color: rgba(59,130,246,0.3);
+  box-shadow: 0 8px 40px rgba(59,130,246,0.08);
+  transform: translateY(-3px);
+}
+
+/* ─────────────────────────────────────────────
+   FORM INPUTS — DARK
+   ───────────────────────────────────────────── */
+.input-dark {
+  width: 100%;
+  padding: 13px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input-dark::placeholder { color: rgba(156,163,175,0.5); }
+.input-dark:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+  background: rgba(255,255,255,0.07);
+}
+
+/* ─────────────────────────────────────────────
+   FAQ ACCORDION
+   ───────────────────────────────────────────── */
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  transition: color 0.2s;
+  gap: 1rem;
+}
+.faq-question:hover { color: #3B82F6; }
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, padding 0.3s ease, opacity 0.3s ease;
+  padding-bottom: 0;
+}
+.faq-answer.open {
+  max-height: 400px;
+  opacity: 1;
+  padding-bottom: 1.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   WHATSAPP FLOAT
+   ───────────────────────────────────────────── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  width: 54px;
+  height: 54px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 10px 32px rgba(37,211,102,0.55);
+}
+
+/* ─────────────────────────────────────────────
+   MODAL
+   ───────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(3,7,18,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadein 0.2s ease;
+}
+.modal-box {
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  box-shadow: 0 32px 100px rgba(0,0,0,0.6);
+  animation: slideup 0.28s ease;
+}
+
+/* ─────────────────────────────────────────────
+   DIVIDERS
+   ───────────────────────────────────────────── */
+.divider-blue {
+  width: 40px; height: 3px;
+  background: #3B82F6;
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+.divider-gold {
+  width: 40px; height: 3px;
+  background: #C89B3C;
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   KEYFRAMES
+   ───────────────────────────────────────────── */
+@keyframes fadein   { from{opacity:0} to{opacity:1} }
+@keyframes slideup  { from{transform:translateY(24px);opacity:0} to{transform:translateY(0);opacity:1} }
+@keyframes spin     { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes progress { from{width:0%} to{width:100%} }
+@keyframes pulse-glow {
+  0%,100% { box-shadow: 0 0 20px rgba(59,130,246,0.2); }
+  50%      { box-shadow: 0 0 40px rgba(59,130,246,0.45); }
+}
+
+/* ─────────────────────────────────────────────
+   TRUST BADGE
+   ───────────────────────────────────────────── */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9CA3AF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(200,155,60,0.25);
+  padding: 5px 14px;
+  border-radius: 4px;
+}
+
+/* ─────────────────────────────────────────────
+   SCROLL MARGIN — keeps sections below sticky nav
+   ───────────────────────────────────────────── */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+
+
+
+/* ─────────────────────────────────────────────
+   HUBSPOT GLOBAL OVERRIDES (Add at the bottom of index.css)
+   ───────────────────────────────────────────── */
+
+/* 1. Watermark Banner ko permanently gayab karne ke liye */
+.hs-backlink,
+.hs-poweredby-wrapper,
+.hs-poweredby,
+.hubspot-link__container,
+.hubspot-link {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+/* 2. Text aur Field Labels ka color high-contrast white karne ke liye */
+.hs-form-field > label,
+.hs-form label.hs-form-field,
+.hs-form .inputs-list label,
+.hs-field-desc {
+  color: #F3F4F6 !important; /* Invisible text ab sharp off-white dikhega */
+  font-family: "Inter", sans-serif !important;
+}
+
+/* 3. Inputs ke andar ke text ko white karne ke liye */
+.hs-form .hs-input,
+.hs-form input[type="text"],
+.hs-form input[type="email"],
+.hs-form input[type="tel"] {
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 4. Extra fuzool spacing/gaps ko tight aur breathable karne ke liye */
+.hs-form .hs-form-field {
+  margin-bottom: 12px !important; /* Bloated spacing ab tight ho jayegi */
+}
+
+.hs-form > fieldset:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ─────────────────────────────────────────────
+   CUSTOM TRANSITIONS & KEYFRAMES
+   ───────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Custom scrollbar style for time slots */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
