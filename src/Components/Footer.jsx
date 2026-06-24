@@ -1,5 +1,5 @@
 import { Mail, MapPin, Shield, Lock } from "lucide-react";
-import logo from "../assets/Finscalegrowth Logo (1).png";
+import logo from "../assets/logo.webp";
 
 const NAV1 = [
   { label:"Our Process",    href:"#process"     },

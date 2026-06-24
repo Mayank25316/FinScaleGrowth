@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/Finscalegrowth Logo (1).png";
+import logo from "../assets/logo.webp";
 import { Menu, X, ChevronRight } from "lucide-react";
 
 const NAV_LINKS = [

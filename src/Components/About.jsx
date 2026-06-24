@@ -1,5 +1,5 @@
 import { User, Cpu, Scale } from "lucide-react";
-import operatorPhoto from "../assets/photo.jpeg";
+import operatorPhoto from "../assets/photo.webp";
 
 export default function About({ onOpenModal }) {
   return (
