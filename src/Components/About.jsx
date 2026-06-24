@@ -13,7 +13,15 @@ export default function About({ onOpenModal }) {
               {/* Grid pattern */}
               <div style={{ position:"absolute", inset:0, backgroundImage:"radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize:"24px 24px" }} />
               <div style={{ width:"90px", height:"90px", borderRadius:"50%", border:"2px solid rgba(200,155,60,0.35)", marginBottom:"1rem", position:"relative", zIndex:1, overflow:"hidden" }}>
-                <img src={operatorPhoto} alt="Abhi Maddiya" style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 12%" }} />
+                <img 
+                  src={operatorPhoto} 
+                  alt="Abhi Maddiya" 
+                  title="Abhi Maddiya - Performance Marketing Operator" 
+                  loading="lazy" 
+                  width="90" 
+                  height="90" 
+                  style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 12%" }} 
+                />
               </div>
               <div style={{ fontFamily:"Inter", fontSize:"1.1rem", fontWeight:700, color:"#FFFFFF", position:"relative", zIndex:1 }}>Abhi Maddiya</div>
               <div style={{ fontFamily:"Inter", fontSize:"0.75rem", color:"#C89B3C", fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase", position:"relative", zIndex:1, marginTop:"4px" }}>Performance Marketing Operator</div>
@@ -44,7 +52,7 @@ export default function About({ onOpenModal }) {
             </h2>
             <div className="divider-gold" />
             <p className="subtext" style={{ fontSize:"0.93rem", marginBottom:"1.1rem" }}>
-              I&apos;m a performance marketing consultant focused exclusively on the US financial services sector — specifically credit repair firms navigating the complex intersection of FTC compliance, consumer intent data, and scalable acquisition systems.
+              I&apos;m a Performance Marketing Operator focused exclusively on CRA Marketing and the US financial services sector — helping credit repair firms navigate the complex intersection of FTC compliance, consumer intent data, and scalable acquisition systems.
             </p>
             <p className="subtext" style={{ fontSize:"0.93rem", marginBottom:"1.1rem" }}>
               My work sits at the hard infrastructure layer: performance marketing pipelines, search-intent signal mapping, first-party data architecture, and legal compliance review — not just ad creative and vanity metrics.

@@ -29,8 +29,12 @@ export default function Footer() {
             <a href="#" style={{ textDecoration: "none", display: "block", marginBottom: "1rem" }}>
               <img
                 src={logo}
-                alt="Finscale Growth"
-                style={{ height: "68px", width: "auto", objectFit: "contain", display: "block" }}
+                alt="Finscale Growth Logo"
+                title="Finscale Growth - Credit Repair Marketing Agency Logo"
+                loading="lazy"
+                width="68"
+                height="68"
+                style={{ height: "68px", width: "68px", objectFit: "contain", display: "block" }}
               />
             </a>
             <p style={{ fontFamily:"Inter", fontSize:"0.84rem", color:"#4B5563", lineHeight:1.7, marginBottom:"1.25rem" }}>

@@ -2,7 +2,7 @@ import { X, Check } from "lucide-react";
 
 const ROWS = [
   { feature: "Lead Ownership",    generic: "Shared leads sold to multiple firms",       ours: "Exclusive, first-party leads owned by you" },
-  { feature: "Compliance Filter", generic: "No CROA/TSR review — your liability",      ours: "Every ad vetted against CROA & TSR standards" },
+  { feature: "Compliance Filter", generic: "No CROA/TSR review — your liability",      ours: "TSR-Compliant Lead Generation vetted against CROA standards" },
   { feature: "Lead Intent",       generic: "Cold outreach & scraped lists",             ours: "Search-intent verified, credit-ready borrowers" },
   { feature: "Backend System",    generic: "Manual follow-up via spreadsheets",         ours: "Automated lead pipelines + CRM routing" },
   { feature: "Financial Risk",    generic: "Locked 6–12 month retainer contracts",      ours: "Month-to-month, performance-fee model" },

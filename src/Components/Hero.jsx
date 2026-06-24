@@ -102,18 +102,15 @@ export default function Hero({ onOpenChecklistModal, onOpenBookingModal }) {
             </div>
 
             <h1
-              className="headline"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)", marginBottom: "1.5rem" }}
+              className="headline text-white block visible"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)", marginBottom: "1.5rem", color: "#FFFFFF", display: "block", opacity: 1, visibility: "visible" }}
             >
-              A Policy-Compliant<br />
-              Client Acquisition System<br />
-              Built for{" "}
-              <span className="accent-blue">US Credit Repair Firms.</span>
+              Credit Repair Marketing Agency <br />
+              Built for <span className="accent-blue">CROA-Compliant Lead Gen</span>
             </h1>
 
             <p className="subtext" style={{ fontSize: "clamp(1rem, 1.5vw, 1.15rem)", maxWidth: "560px", marginBottom: "2.5rem" }}>
-              Zero Compliance Risks. No Ghost Leads. No Policy Bans.
-              Build a predictable pipeline of qualified borrowers — on autopilot.
+              Zero compliance risks. Build a predictable pipeline with a dedicated Credit Repair Acquisitions Engine designed to generate Qualified Credit Repair Leads and Inbound Debt Relief Leads on autopilot.
             </p>
 
             {/* Stats */}

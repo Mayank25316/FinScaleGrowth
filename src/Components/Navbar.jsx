@@ -29,8 +29,12 @@ export default function Navbar({ onOpenModal }) {
         <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", flexShrink: 0 }}>
           <img
             src={logo}
-            alt="Finscale Growth"
-            style={{ height: "54px", width: "auto", objectFit: "contain", display: "block" }}
+            alt="Finscale Growth Logo"
+            title="Finscale Growth - Credit Repair Marketing Agency Logo"
+            loading="eager"
+            width="54"
+            height="54"
+            style={{ height: "54px", width: "54px", objectFit: "contain", display: "block" }}
           />
         </a>
 
