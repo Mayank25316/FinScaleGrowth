@@ -1,4 +1,4 @@
-import { Mail, MapPin, Shield, Lock } from "lucide-react";
+import { Mail, Shield, Lock } from "lucide-react";
 import logo from "../assets/logo.webp";
 
 const NAV1 = [

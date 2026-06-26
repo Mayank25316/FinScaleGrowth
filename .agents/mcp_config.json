@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gsc": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mikusnuz/gsc-mcp"
+      ],
+      "env": {
+        "GSC_SERVICE_ACCOUNT_KEY_PATH": "C:/Users/mayan/.gemini/gsc-credentials.json"
+      }
+    }
+  }
+}
