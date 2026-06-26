@@ -75,7 +75,7 @@ export default function Footer() {
             <h4 style={{ fontFamily:"Inter", fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#4B5563", marginBottom:"1rem" }}>Contact</h4>
             <div style={{ display:"flex", flexDirection:"column", gap:"14px" }}>
               <a href="mailto:abhi@abhimaddiya.com" style={{ ...linkStyle, display:"flex", alignItems:"center", gap:"10px" }} onMouseEnter={e=>(e.currentTarget.style.color="#FFFFFF")} onMouseLeave={e=>(e.currentTarget.style.color="#6B7280")}>
-                <Mail size={14} color="#3B82F6" style={{ flexShrink:0 }} /> abhi@abhimaddiya.com
+                <Mail size={14} color="#3B82F6" style={{ flexShrink:0 }} /> contact@finscalegrowth.com
               </a>
               {/* <div style={{ display:"flex", alignItems:"flex-start", gap:"10px", fontFamily:"Inter", fontSize:"0.88rem", color:"#6B7280" }}>
                 <MapPin size={14} color="#3B82F6" style={{ flexShrink:0, marginTop:"2px" }} /> Serving US Credit Repair Firms Nationwide
